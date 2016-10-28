@@ -4,9 +4,9 @@ version = "0.1.0"
 authors = ["The intermezzOS team"]
 build = "build.rs"
 
-[workspace]
-
 [dependencies]
+vga = { path = "../vga" }
+rlibc = "1.0.0"
 
 [profile.dev]
 panic = "abort"

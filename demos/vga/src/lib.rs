@@ -29,7 +29,7 @@ impl<T: AsMut<[u8]>> Vga<T> {
     }
 
     pub fn flush(&mut self) {
-      panic!()
+      self.slice.as_mut().clone_from_slice(&self.buffer);
     }
 
     fn write_byte(&mut self, byte: u8) {
